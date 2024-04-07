@@ -1,0 +1,6 @@
+@import url(reset.css);
+@import url(vars.css);
+
+body {
+  background-color: var(--gray-white);
+}
