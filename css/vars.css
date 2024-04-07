@@ -1,7 +1,8 @@
 :root {
-  --dark: #000000;
-  --dark-blue: #14213d;
-  --yellow: #fca311;
-  --gray-white: #e5e5e5;
-  --white: #ffffff;
+  --background: #e5e5e5;
+  --card-color: #ffffff;
+  --text-color: #464655;
+  --primary: #82b9ff;
+  --secondary: #ff6464;
+  --tertiary: #ffcd46;
 }

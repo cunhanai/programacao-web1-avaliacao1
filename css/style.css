@@ -1,6 +1,48 @@
 @import url(reset.css);
 @import url(vars.css);
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap");
+
+.hidden {
+  display: none;
+}
 
 body {
-  background-color: var(--gray-white);
+  font-family: "Comfortaa", sans-serif;
+  background-color: var(--background);
+  color: var(--text-color);
+}
+
+header {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem;
+  padding: 1.5rem;
+  background-color: var(--card-color);
+  width: calc(100% - (1rem * 2 + 1.5rem * 2));
+  border-radius: 2rem;
+  box-shadow: 0 0 85px -82px black;
+}
+
+#logotipo {
+  height: 3rem;
+  width: auto;
+}
+
+#usuario-info {
+  display: inline-flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+}
+
+#usuario-info__login {
+  font-size: 1.1rem;
+  font-weight: bolder;
+}
+
+#usuario-info__picture {
+  height: 3rem;
+  width: auto;
 }
