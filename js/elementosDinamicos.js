@@ -9,6 +9,15 @@
 */
 
 document.addEventListener('DOMContentLoaded', () => {
+  let usuario = getUsuarioLogado()
+  setHeader(usuario)
+})
+
+function getUsuarioLogado() {
+  return localStorage.getItem('login')
+}
+
+function setHeader(usuario) {
   let header = document.getElementById('header-dinamica')
 
   header.classList.add('container')
@@ -24,13 +33,18 @@ document.addEventListener('DOMContentLoaded', () => {
         </a>
     </div>
     <div id="usuario-info">
-        <p id="usuario-info__login">Gabriel Cestari</p>
-        <img
-            id="usuario-info__picture"
-            src="assets/img/icon-user.png"
-            alt="Ícone de usuário padrão com a representação abstrata de uma pessoa em formas geométricas do peito para cima em escala de cinza"
-        />
+        <p id="usuario-info__login">${
+          usuario || 'Usuário não autenticado'
+        }</p>${
+    !usuario
+      ? ''
+      : `<img
+        id="usuario-info__picture"
+        src="assets/img/icon-user.png"
+        alt="Ícone de usuário padrão com a representação abstrata de uma pessoa em formas geométricas do peito para cima em escala de cinza"
+    />`
+  }
     </div>`
 
   document.body.appendChild(header)
-})
+}
