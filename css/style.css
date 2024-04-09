@@ -22,7 +22,7 @@ header {
   background-color: var(--card-color);
   width: calc(100% - (1rem * 2 + 1.5rem * 2));
   border-radius: 2rem;
-  box-shadow: 0 0 85px -82px black;
+  box-shadow: 0 0 85px -80px black;
 }
 
 #logotipo {
