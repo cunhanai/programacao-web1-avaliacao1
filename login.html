@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <link
+      rel="stylesheet"
+      href="css/style.css"
+    />
+    <script
+      src="js/cabecalhoRodape.js"
+      type="text/javascript"
+    ></script>
+    <script src="js/validacaoLogin.js"></script>
+    <title>Gamelog - Login</title>
+  </head>
+  <body>
+    <header id="header-dinamica"></header>
+    <main id="login-container">
+      <div class="container">
+        <form
+          id="login"
+          action=""
+          method="post"
+          onsubmit="validarLogin()"
+        >
+          <div class="field">
+            <label for="login">Login</label>
+            <input
+              type="text"
+              name="login"
+              id="login-field"
+              placeholder="Digite seu login"
+              minlength="4"
+              pattern="^([A-Za-z0-9_@.])+$"
+              title="Apenas letras, números e os caractéres '_', '@' e '.' são permitidos."
+              autofocus
+              required
+            />
+          </div>
+          <div class="field">
+            <label for="password">Senha</label>
+            <input
+              type="password"
+              name="password"
+              id="password-field"
+              placeholder="Digite sua senha"
+              pattern="^([A-Za-z0-9_@#$])+$"
+              title="Apenas letras, números e os caractéres '_', '@', '.', '#' e '$' são permitidos."
+              minlength="4"
+              required
+            />
+          </div>
+          <input
+            type="submit"
+            value="Entrar"
+            id="submit-button"
+          />
+        </form>
+      </div>
+    </main>
+  </body>
+</html>

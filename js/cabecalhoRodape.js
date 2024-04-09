@@ -11,6 +11,8 @@
 document.addEventListener('DOMContentLoaded', () => {
   let header = document.getElementById('header-dinamica')
 
+  header.classList.add('container')
+
   header.innerHTML = `
     <div id="logotipo">
         <a href="index.html">
