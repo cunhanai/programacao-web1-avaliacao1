@@ -1,6 +1,11 @@
 @import url(reset.css);
 @import url(vars.css);
+/* fontes:
+  - Confortaa
+ - Futura-pt
+*/
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+@import url('https://use.typekit.net/qzx1khv.css');
 
 .hidden {
   display: none;
@@ -23,6 +28,16 @@ header {
   align-items: center;
   box-shadow: 0 0 85px -80px black;
   padding: 1.5rem !important;
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.center {
+  display: flex;
+  align-self: center;
 }
 
 .container {
@@ -75,10 +90,11 @@ header {
 
 input,
 button {
+  font-family: 'Comfortaa', sans-serif;
   border: 1px solid transparent;
-  padding: 1rem;
+  padding: 1rem 1.5rem;
   border-radius: 500px;
-  font-size: 1rem;
+  font-size: 0.9rem;
   background-color: var(--background);
 }
 
@@ -92,4 +108,13 @@ input[type='submit'] {
   font-weight: 700;
   box-shadow: 0 0 85px -20px black;
   width: 100%;
+}
+
+input[type='submit']:hover {
+  box-shadow: 0 0 50px -15px black;
+}
+.validation-message {
+  margin-left: 1rem;
+  font-size: 0.9rem;
+  color: rgb(207, 17, 17);
 }

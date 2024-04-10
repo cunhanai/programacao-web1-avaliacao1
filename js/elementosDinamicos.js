@@ -32,6 +32,7 @@ function setHeader(usuario) {
             />  
         </a>
     </div>
+    <div><h1 class="center">GAMELOG</h1></div>
     <div id="usuario-info">
         <p id="usuario-info__login">${
           usuario || 'Usuário não autenticado'

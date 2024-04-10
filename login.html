@@ -10,6 +10,7 @@
       rel="stylesheet"
       href="css/style.css"
     />
+    <script src="js/logout.js"></script>
     <script
       src="js/elementosDinamicos.js"
       type="text/javascript"
@@ -34,12 +35,16 @@
               name="login"
               id="login-field"
               placeholder="Digite seu login"
-              minlength="4"
               pattern="^([A-Za-z0-9_@.])+$"
               title="Apenas letras, números e os caractéres '_', '@' e '.' são permitidos."
               autofocus
-              required
             />
+            <p
+              class="validation-message hidden"
+              id="mensagem-login"
+            >
+              * login não encontrado!
+            </p>
           </div>
           <div class="field">
             <label for="password">Senha</label>
@@ -50,9 +55,13 @@
               placeholder="Digite sua senha"
               pattern="^([A-Za-z0-9_@#$])+$"
               title="Apenas letras, números e os caractéres '_', '@', '.', '#' e '$' são permitidos."
-              minlength="4"
-              required
             />
+            <p
+              class="validation-message hidden"
+              id="mensagem-senha"
+            >
+              * senha não encontrada!
+            </p>
           </div>
           <input
             type="submit"
