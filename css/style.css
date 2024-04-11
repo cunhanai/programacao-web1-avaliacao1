@@ -113,8 +113,22 @@ input[type='submit'] {
 input[type='submit']:hover {
   box-shadow: 0 0 50px -15px black;
 }
+
 .validation-message {
   margin-left: 1rem;
   font-size: 0.9rem;
   color: rgb(207, 17, 17);
+}
+
+footer {
+  background-color: white;
+  color: rgb(24, 42, 75);
+  text-align: center;
+  padding: 10px;
+  font-size: 0.8em;
+  font-style: italic;
+  position: fixed;
+  width: 100vw;
+  bottom: 0px;
+  left: 0px;
 }
