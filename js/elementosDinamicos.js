@@ -11,6 +11,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   let usuario = getUsuarioLogado()
   setHeader(usuario)
+  setProfileButton(usuario)
 })
 
 function getUsuarioLogado() {
@@ -20,7 +21,7 @@ function getUsuarioLogado() {
 function setHeader(usuario) {
   let header = document.getElementById('header-dinamica')
 
-  header.classList.add('container')
+  header.classList.remove('hidden')
 
   header.innerHTML = `
     <div id="logotipo">
@@ -32,7 +33,6 @@ function setHeader(usuario) {
             />  
         </a>
     </div>
-    <div><h1 class="center">GAMELOG</h1></div>
     <div id="usuario-info">
         <p id="usuario-info__login">${
           usuario || 'Usuário não autenticado'
@@ -47,5 +47,11 @@ function setHeader(usuario) {
   }
     </div>`
 
-  document.body.appendChild(header)
+}
+
+function setProfileButton(usuario) {
+  if (usuario) {
+    document.getElementById('login-button').classList.add('hidden')
+    document.getElementById('perfil-button').classList.remove('hidden')
+  }
 }
