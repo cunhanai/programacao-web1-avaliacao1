@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/elementosDinamicos.js" type="text/javascript"></script>
+    <title>Cadastro</title>
+</head>
+
+<body>
+    <!-- mexer na header!!! -->
+    <header id="header-dinamica"></header>
+    <!-- 
+    <input type="radio" id="estilo-1" name="estilos"><label for="estilo-1">Estilo 1</label>
+    <input type="radio" id="estilo-2" name="estilos"><label for="estilo-2">Estilo 2</label>
+ -->
+    <form class="container" id="form-cadastro">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome"><br>
+
+        <label for="sobrenome">Sobrenome:</label>
+        <input type="text" id="sobrenome"><br>
+
+        <label for="endereco">Endereco:</label>
+        <input type="text" id="endereco"><br>
+
+        <label for="idade">Selecione sua data de nascimento:</label>
+        <input type="date" id="idade"><br>
+
+        <label>ex. escolha unica:</label>
+        <input type="radio" id="op-1" name="opcoes" onclick="javascript:opcaoRadioOutro()"><label for="op-1">Opcao 1</label>
+        <input type="radio" id="op-2" name="opcoes" onclick="javascript:opcaoRadioOutro()"><label for="op-2">Opcao 2</label>
+        <input type="radio" id="op-3" name="opcoes" onclick="javascript:opcaoRadioOutro()"><label for="op-3">Opcao 3</label>
+        <input type="radio" id="radio-outro" name="opcoes" onclick="javascript:opcaoRadioOutro()">
+        <label for="radio-outro">Opcao outro</label>
+        <div id="radio-hidden" style="visibility: hidden">
+            <input type="text" id="radio-outro-txt"><br>
+        </div>
+
+        <label>ex multipla escolha:</label>
+        <input type="checkbox" id="caixa-1" name="caixa-1"><label for="caixa-1">mtp escolha 1</label>
+        <input type="checkbox" id="caixa-2" name="caixa-2"><label for="caixa-2">mtp escolha 1</label>
+        <input type="checkbox" id="caixa-3" name="caixa-3"><label for="caixa-3">mtp escolha 1</label>
+        <input type="checkbox" id="caixa-outro" name="caixa-outro" onclick="javascript:opcaoBoxOutro()">
+        <label for="caixa-outro">Opcao outro</label>
+        <div id="caixa-hidden" style="visibility: hidden">
+            <input type="text" id="caixa-outro-txt"><br>
+        </div>
+
+        <input type="submit" value="Enviar"><br>
+    </form>
+
+    <footer>Ana Júlia da Cunha & Gabriel Ribas Cestari - 2024</footer>
+</body>
+
+</html>

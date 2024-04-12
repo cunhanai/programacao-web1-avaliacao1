@@ -49,3 +49,23 @@ function setHeader(usuario) {
 
   document.body.appendChild(header)
 }
+
+function opcaoRadioOutro() {
+
+  if (document.getElementById('radio-outro').checked) {
+    document.getElementById('radio-hidden').style.visibility = 'visible';
+  } 
+  else {
+    document.getElementById('radio-hidden').style.visibility = 'hidden';
+  }
+}
+
+function opcaoBoxOutro() {
+
+  if (document.getElementById('caixa-outro').checked) {
+    document.getElementById('caixa-hidden').style.visibility = 'visible';
+  } 
+  else {
+    document.getElementById('caixa-hidden').style.visibility = 'hidden';
+  }
+}
