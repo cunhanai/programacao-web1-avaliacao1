@@ -16,15 +16,16 @@
     <input type="radio" id="estilo-1" name="estilos"><label for="estilo-1">Estilo 1</label>
     <input type="radio" id="estilo-2" name="estilos"><label for="estilo-2">Estilo 2</label>
  -->
-    <form class="container" id="form-cadastro">
-        <label for="nome">Nome:</label>
+    <form class="container-form" id="form-cadastro">
+        <label for="nome">Nome Completo:</label>
         <input type="text" id="nome"><br>
 
-        <label for="sobrenome">Sobrenome:</label>
-        <input type="text" id="sobrenome"><br>
+        <label for="username">Nome de Usuario:</label>
+        <input type="text" id="username"><br>
 
-        <label for="endereco">Endereco:</label>
-        <input type="text" id="endereco"><br>
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha">
+        <input type="button" value="<o>" onmousedown="javascript:mostrarSenha()" onmouseup="javascript:mostrarSenha()"><br>
 
         <label for="idade">Selecione sua data de nascimento:</label>
         <input type="date" id="idade"><br>

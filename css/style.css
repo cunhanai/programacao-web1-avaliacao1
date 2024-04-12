@@ -132,3 +132,28 @@ footer {
   bottom: 0px;
   left: 0px;
 }
+
+.body-form {
+  font-family: 'Comfortaa', sans-serif;
+  background-color: var(--background);
+  color: var(--text-color);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 1rem;
+  align-items: center;
+}
+
+.container-form {
+  background-color: var(--container-color);
+  border-radius: 2rem;
+  box-shadow: 0 0 85px -80px black;
+  padding: 2.5rem;
+  display: block;
+  position:absolute;
+  top: 12em;
+  left: 20%;
+  right: 20%;
+  align-content: center;
+  justify-content: center;
+}

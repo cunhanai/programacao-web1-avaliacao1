@@ -69,3 +69,12 @@ function opcaoBoxOutro() {
     document.getElementById('caixa-hidden').style.visibility = 'hidden';
   }
 }
+
+function mostrarSenha() {
+  var alterador = document.getElementById('senha');
+  if (alterador.type === 'password') {
+    alterador.type = 'text';
+  } else {
+    alterador.type = 'password';
+  }
+}
