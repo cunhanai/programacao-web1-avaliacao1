@@ -150,10 +150,32 @@ footer {
   box-shadow: 0 0 85px -80px black;
   padding: 2.5rem;
   display: block;
-  position:absolute;
-  top: 12em;
-  left: 20%;
-  right: 20%;
-  align-content: center;
-  justify-content: center;
+  position: flex;
+  width: 42rem;
+  align-self: center;
+}
+
+.div-nobreak {
+  white-space: nowrap;
+}
+
+.multipla-escolha {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.botao-submit-pos {
+  width: 10rem;
+  display: flex;
+}
+
+.botao-submit {
+  cursor: pointer;
+}
+
+.peep-button {
+  padding: 0px;
+  background-color: transparent;
+  cursor: pointer;
 }

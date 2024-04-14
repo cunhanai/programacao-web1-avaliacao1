@@ -27,7 +27,8 @@ function setHeader(usuario) {
         <a href="index.html">
             <img
                 id="logotipo"
-                src="assets/img/logo-128px.png"
+                src="assets/img/logo-bw.png"
+                /* mudar alt */
                 alt="Logo flat do site contendo um controle de videogame cinza com o botões nas cores amarelo, vermelho e azul claro."
             />  
         </a>
@@ -51,30 +52,34 @@ function setHeader(usuario) {
 }
 
 function opcaoRadioOutro() {
-
   if (document.getElementById('radio-outro').checked) {
-    document.getElementById('radio-hidden').style.visibility = 'visible';
+    document.getElementById('radio-outro-txt').readOnly = false;
   } 
   else {
-    document.getElementById('radio-hidden').style.visibility = 'hidden';
+    document.getElementById('radio-outro-txt').readOnly = true;
+    document.getElementById('radio-outro-txt').value = "";
   }
 }
 
 function opcaoBoxOutro() {
-
   if (document.getElementById('caixa-outro').checked) {
-    document.getElementById('caixa-hidden').style.visibility = 'visible';
+    document.getElementById('caixa-outro-txt').readOnly = false;
   } 
   else {
-    document.getElementById('caixa-hidden').style.visibility = 'hidden';
+    document.getElementById('caixa-outro-txt').readOnly = true;
+    document.getElementById('caixa-outro-txt').value = "";
   }
 }
 
 function mostrarSenha() {
   var alterador = document.getElementById('senha');
+  var olho = document.getElementById('botao-olho');
+
   if (alterador.type === 'password') {
     alterador.type = 'text';
+    olho.src = 'assets/img/view-16px.png';
   } else {
     alterador.type = 'password';
+    olho.src = 'assets/img/hidden-16px.png';
   }
 }
