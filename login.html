@@ -19,57 +19,62 @@
     <title>Gamelog - Login</title>
   </head>
   <body>
-    <header id="header-dinamica" class="container hidden"></header>
-    <main id="login-container">
-      <div class="container">
-        <form
-          id="login"
-          action="javascript:;"
-          method="post"
-          onsubmit="validarLogin()"
-        >
-          <div class="field">
-            <label for="login">Login</label>
+    <section id="login-section">
+      <header
+        id="header-dinamica"
+        class="container hidden sem-menu-lateral"
+      ></header>
+      <main id="login-container">
+        <div class="container">
+          <form
+            id="login"
+            action="javascript:;"
+            method="post"
+            onsubmit="validarLogin()"
+          >
+            <div class="field">
+              <label for="login">Login</label>
+              <input
+                type="text"
+                name="login"
+                id="login-field"
+                placeholder="Digite seu login"
+                pattern="^([A-Za-z0-9_@.])+$"
+                title="Apenas letras, números e os caractéres '_', '@' e '.' são permitidos."
+                autofocus
+              />
+              <p
+                class="validation-message hidden"
+                id="mensagem-login"
+              >
+                * login não encontrado!
+              </p>
+            </div>
+            <div class="field">
+              <label for="password">Senha</label>
+              <input
+                type="password"
+                name="password"
+                id="password-field"
+                placeholder="Digite sua senha"
+                pattern="^([A-Za-z0-9_@#$])+$"
+                title="Apenas letras, números e os caractéres '_', '@', '.', '#' e '$' são permitidos."
+              />
+              <p
+                class="validation-message hidden"
+                id="mensagem-senha"
+              >
+                * senha não encontrada!
+              </p>
+            </div>
             <input
-              type="text"
-              name="login"
-              id="login-field"
-              placeholder="Digite seu login"
-              pattern="^([A-Za-z0-9_@.])+$"
-              title="Apenas letras, números e os caractéres '_', '@' e '.' são permitidos."
-              autofocus
+              type="submit"
+              value="Entrar"
+              id="submit-button"
             />
-            <p
-              class="validation-message hidden"
-              id="mensagem-login"
-            >
-              * login não encontrado!
-            </p>
-          </div>
-          <div class="field">
-            <label for="password">Senha</label>
-            <input
-              type="password"
-              name="password"
-              id="password-field"
-              placeholder="Digite sua senha"
-              pattern="^([A-Za-z0-9_@#$])+$"
-              title="Apenas letras, números e os caractéres '_', '@', '.', '#' e '$' são permitidos."
-            />
-            <p
-              class="validation-message hidden"
-              id="mensagem-senha"
-            >
-              * senha não encontrada!
-            </p>
-          </div>
-          <input
-            type="submit"
-            value="Entrar"
-            id="submit-button"
-          />
-        </form>
-      </div>
-    </main>
+          </form>
+        </div>
+      </main>
+    </section>
   </body>
 </html>

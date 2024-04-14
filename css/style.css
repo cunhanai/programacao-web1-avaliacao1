@@ -35,6 +35,10 @@ header {
   margin-bottom: 2rem;
 }
 
+.sem-menu-lateral {
+  width: calc(100% - 3rem) !important;
+}
+
 h1 {
   font-size: 1.5rem;
   font-weight: 700;
@@ -135,11 +139,11 @@ nav {
   font-weight: 700;
   font-size: 1rem;
   width: 13rem;
-  height: calc(100% - 2*1.5rem - 2* 1rem);
+  height: calc(100% - 2 * 1.5rem - 2 * 1rem);
 }
 
-
-body, html {
+body,
+html {
   height: 100%;
 }
 
@@ -153,7 +157,10 @@ body, html {
   text-shadow: 0 0 50px -15px black;
 }
 
-a, a:link, a:visited, a:active {
+a,
+a:link,
+a:visited,
+a:active {
   color: var(--container-color);
 }
 
@@ -162,4 +169,8 @@ a, a:link, a:visited, a:active {
   flex-direction: column;
   width: calc(100% - 3 * 1rem - 13rem);
   gap: 1rem;
+}
+
+#login-section {
+  width: 100%;
 }
