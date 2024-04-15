@@ -58,11 +58,12 @@ function setProfileButton(usuario) {
 }
 
 function opcaoRadioOutro() {
-  if (document.getElementById('radio-outro').checked) {
-    document.getElementById('radio-outro-txt').readOnly = false;
-  } else {
-    document.getElementById('radio-outro-txt').readOnly = true;
-    document.getElementById('radio-outro-txt').value = '';
+  if (document.getElementById('genero-outro').checked) {
+    document.getElementById('genero-outro-txt').readOnly = false;
+  } 
+  else {
+    document.getElementById('genero-outro-txt').readOnly = true;
+    document.getElementById('genero-outro-txt').value = "";
   }
 }
 
