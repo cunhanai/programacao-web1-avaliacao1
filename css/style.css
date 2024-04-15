@@ -200,13 +200,10 @@ footer {
 }
 
 .container-form {
-  background-color: var(--container-color);
-  border-radius: 2rem;
-  box-shadow: 0 0 85px -80px black;
-  padding: 2.5rem;
   display: block;
   position: flex;
-  width: 42rem;
+  width: calc(100% - 3 * 1rem - 2 * 1rem);
+  max-width: 42rem;
   align-self: center;
 }
 
@@ -221,8 +218,9 @@ footer {
 }
 
 .botao-submit-pos {
-  width: 10rem;
+  width: 100%;
   display: flex;
+  justify-content: center;
 }
 
 .botao-submit {
@@ -235,62 +233,6 @@ footer {
   cursor: pointer;
 }
 
-footer {
-  background-color: white;
-  color: rgb(24, 42, 75);
-  text-align: center;
-  padding: 10px;
-  font-size: 0.8em;
-  font-style: italic;
-  position: fixed;
-  width: 100vw;
-  bottom: 0px;
-  left: 0px;
-}
-
-.body-form {
-  font-family: 'Comfortaa', sans-serif;
-  background-color: var(--background);
-  color: var(--text-color);
-  padding: 1rem;
-  display: flex;
-  flex-direction: column-reverse;
-  gap: 1rem;
-  align-items: center;
-}
-
-.container-form {
-  background-color: var(--container-color);
-  border-radius: 2rem;
-  box-shadow: 0 0 85px -80px black;
-  padding: 2.5rem;
-  display: block;
-  position: flex;
-  width: 42rem;
-  align-self: center;
-}
-
-.div-nobreak {
-  white-space: nowrap;
-}
-
-.multipla-escolha {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.botao-submit-pos {
-  width: 10rem;
-  display: flex;
-}
-
-.botao-submit {
-  cursor: pointer;
-}
-
-.peep-button {
-  padding: 0px;
-  background-color: transparent;
-  cursor: pointer;
+#btn-salvar {
+  width: fit-content;
 }
