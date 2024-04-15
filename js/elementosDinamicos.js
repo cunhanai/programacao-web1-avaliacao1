@@ -35,19 +35,18 @@ function setHeader(usuario) {
             />  
         </a>
     </div>
-    <div id="usuario-info">
-        <p id="usuario-info__login">${
-          usuario || 'Usuário não autenticado'
-        }</p>${
-    !usuario
-      ? ''
-      : `<img
-        id="usuario-info__picture"
-        src="assets/img/icon-user.png"
-        alt="Ícone de usuário padrão com a representação abstrata de uma pessoa em formas geométricas do peito para cima em escala de cinza"
-    />`
-  }
-    </div>`;
+    ${
+      !usuario
+        ? `<p id="usuario-info__login">Usuário não autenticado</p>`
+        : `<a href="/cadastro.html" class="text" id="usuario-info">
+            <p id="usuario-info__login">${usuario}</p>
+            <img
+              id="usuario-info__picture"
+              src="assets/img/icon-user.png"
+              alt="Ícone de usuário padrão com a representação abstrata de uma pessoa em formas geométricas do peito para cima em escala de cinza"
+            />
+          </a>`
+    }`;
 }
 
 function setProfileButton(usuario) {
@@ -60,10 +59,9 @@ function setProfileButton(usuario) {
 function opcaoRadioOutro() {
   if (document.getElementById('genero-outro').checked) {
     document.getElementById('genero-outro-txt').readOnly = false;
-  } 
-  else {
+  } else {
     document.getElementById('genero-outro-txt').readOnly = true;
-    document.getElementById('genero-outro-txt').value = "";
+    document.getElementById('genero-outro-txt').value = '';
   }
 }
 
@@ -144,7 +142,9 @@ function setSidebar() {
         id="perfil-button"
         class="hidden"
       >
-        Perfil
+        <a href="/cadastro.html">
+          Perfil
+        </a>
       </p>
     </div>`;
   }
