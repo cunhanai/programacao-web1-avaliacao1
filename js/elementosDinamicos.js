@@ -107,11 +107,6 @@ function setSidebar() {
       </li>
       <li>
         <div class="nav-item">
-          <p>Destaques</p>
-        </div>
-      </li>
-      <li>
-        <div class="nav-item">
           <p>Gratuitos</p>
         </div>
       </li>
