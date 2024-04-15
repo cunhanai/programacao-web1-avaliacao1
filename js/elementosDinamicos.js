@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setHeader(usuario);
   setSidebar(usuario);
   setProfileButton(usuario);
-  
+  loadPalette();
 });
 
 function getUsuarioLogado() {
@@ -145,35 +145,61 @@ function setSidebar() {
   }
 }
 
-function paletteSwap() {
-
-  var estilo1 = document.getElementById('estilo-1');
-  var estilo2 = document.getElementById('estilo-2');
+function loadPalette() {
   var logo = document.getElementById('logotipo');
 
-  if (estilo2.checked) {
-    logo.src = 'assets/img/logo-grd.png';
-
-    document.documentElement.style.setProperty('--font', '"Nunito Sans", sans-serif');
-
-    document.documentElement.style.setProperty('--background', '#171e27');
-    document.documentElement.style.setProperty('--container-color', '#33445c');
-    document.documentElement.style.setProperty('--text-color', '#cec4f3');
-    document.documentElement.style.setProperty('--text-background', '#d1d1d1');
-    document.documentElement.style.setProperty('--primary', '#594ae2');
-    document.documentElement.style.setProperty('--secondary', '#cf65ca');
-    document.documentElement.style.setProperty('--tertiary', '#d7ff46');
-  } else if (estilo1.checked) {
-    logo.src = 'assets/img/logo-bw.png';
-
-    document.documentElement.style.setProperty('--font', '"Comfortaa", sans-serif');
-
-    document.documentElement.style.setProperty('--background', '#e5e5e5');
-    document.documentElement.style.setProperty('--container-color', '#ffffff');
-    document.documentElement.style.setProperty('--text-color', '#464655');
-    document.documentElement.style.setProperty('--text-background', '#4d6079');
-    document.documentElement.style.setProperty('--primary', '#82b9ff');
-    document.documentElement.style.setProperty('--secondary', '#ff6464');
-    document.documentElement.style.setProperty('--tertiary', '#ffcd46');
+  if (!localStorage.getItem('logo')) {
+    localStorage.setItem('logo', 'assets/img/logo-bw.png');
+    localStorage.setItem('checked', 'estilo1');
   }
+
+  logo.src = localStorage.getItem('logo');
+
+  document.documentElement.style.setProperty('--font', localStorage.getItem('font'));
+
+  document.documentElement.style.setProperty('--background', localStorage.getItem('background'));
+  document.documentElement.style.setProperty('--container-color', localStorage.getItem('container-color'));
+  document.documentElement.style.setProperty('--text-color', localStorage.getItem('text-color'));
+  document.documentElement.style.setProperty('--text-background', localStorage.getItem('text-background'));
+  document.documentElement.style.setProperty('--primary', localStorage.getItem('primary'));
+  document.documentElement.style.setProperty('--secondary', localStorage.getItem('secondary'));
+  document.documentElement.style.setProperty('--tertiary', localStorage.getItem('tertiary'));
+}
+
+function paletteSwap() {
+  var estilo1 = document.getElementById('estilo-1');
+  var estilo2 = document.getElementById('estilo-2');
+
+  if (estilo2.checked) {
+    localStorage.setItem('checked', 'estilo2');
+
+    localStorage.setItem('logo', 'assets/img/logo-grd.png');
+
+    localStorage.setItem('font', '"Nanum Gothic", sans-serif');
+
+    localStorage.setItem('background', '#171e27');
+    localStorage.setItem('container-color', '#33445c');
+    localStorage.setItem('text-color', '#cec4f3');
+    localStorage.setItem('text-background', '#4d6079');
+    localStorage.setItem('primary', '#594ae2');
+    localStorage.setItem('secondary', '#d1286b');
+    localStorage.setItem('tertiary', '#d7ff46');
+
+  } else if (estilo1.checked) {
+    localStorage.setItem('checked', 'estilo1');
+
+    localStorage.setItem('logo', 'assets/img/logo-bw.png');
+
+    localStorage.setItem('font', '"Comfortaa", sans-serif');
+
+    localStorage.setItem('background', '#e5e5e5');
+    localStorage.setItem('container-color', '#ffffff');
+    localStorage.setItem('text-color', '#464655');
+    localStorage.setItem('text-background', '#d1d1d1');
+    localStorage.setItem('primary', '#82b9ff');
+    localStorage.setItem('secondary', '#ff6464');
+    localStorage.setItem('tertiary', '#ffcd46');
+  }
+
+  loadPalette();
 }
