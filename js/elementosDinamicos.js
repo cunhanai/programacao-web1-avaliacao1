@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setHeader(usuario);
   setSidebar(usuario);
   setProfileButton(usuario);
+  
 });
 
 function getUsuarioLogado() {
@@ -25,7 +26,7 @@ function setHeader(usuario) {
   header.classList.remove('hidden');
 
   header.innerHTML = `
-    <div id="logotipo">
+    <div>
         <a href="index.html">
             <img
                 id="logotipo"
@@ -35,10 +36,9 @@ function setHeader(usuario) {
             />  
         </a>
     </div>
-    ${
-      !usuario
-        ? `<p id="usuario-info__login">Usuário não autenticado</p>`
-        : `<a href="/cadastro.html" class="text" id="usuario-info">
+    ${!usuario
+      ? `<p id="usuario-info__login">Usuário não autenticado</p>`
+      : `<a href="/cadastro.html" class="text" id="usuario-info">
             <p id="usuario-info__login">${usuario}</p>
             <img
               id="usuario-info__picture"
@@ -142,5 +142,38 @@ function setSidebar() {
         </a>
       </p>
     </div>`;
+  }
+}
+
+function paletteSwap() {
+
+  var estilo1 = document.getElementById('estilo-1');
+  var estilo2 = document.getElementById('estilo-2');
+  var logo = document.getElementById('logotipo');
+
+  if (estilo2.checked) {
+    logo.src = 'assets/img/logo-grd.png';
+
+    document.documentElement.style.setProperty('--font', '"Nunito Sans", sans-serif');
+
+    document.documentElement.style.setProperty('--background', '#171e27');
+    document.documentElement.style.setProperty('--container-color', '#33445c');
+    document.documentElement.style.setProperty('--text-color', '#cec4f3');
+    document.documentElement.style.setProperty('--text-background', '#d1d1d1');
+    document.documentElement.style.setProperty('--primary', '#594ae2');
+    document.documentElement.style.setProperty('--secondary', '#cf65ca');
+    document.documentElement.style.setProperty('--tertiary', '#d7ff46');
+  } else if (estilo1.checked) {
+    logo.src = 'assets/img/logo-bw.png';
+
+    document.documentElement.style.setProperty('--font', '"Comfortaa", sans-serif');
+
+    document.documentElement.style.setProperty('--background', '#e5e5e5');
+    document.documentElement.style.setProperty('--container-color', '#ffffff');
+    document.documentElement.style.setProperty('--text-color', '#464655');
+    document.documentElement.style.setProperty('--text-background', '#4d6079');
+    document.documentElement.style.setProperty('--primary', '#82b9ff');
+    document.documentElement.style.setProperty('--secondary', '#ff6464');
+    document.documentElement.style.setProperty('--tertiary', '#ffcd46');
   }
 }

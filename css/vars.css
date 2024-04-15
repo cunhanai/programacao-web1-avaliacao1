@@ -1,7 +1,9 @@
 :root {
+  --font: 'Comfortaa', sans-serif;
   --background: #e5e5e5;
   --container-color: #ffffff;
   --text-color: #464655;
+  --text-background:  #d1d1d1;
   --primary: #82b9ff;
   --secondary: #ff6464;
   --tertiary: #ffcd46;
