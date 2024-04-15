@@ -48,7 +48,8 @@ h3 {
   font-size: 1.1rem;
 }
 
-h1, h3 {
+h1,
+h3 {
   font-weight: 700;
 }
 
@@ -309,16 +310,66 @@ main {
 }
 
 /* width */
-main::-webkit-scrollbar, div.scrollable::-webkit-scrollbar {
+main::-webkit-scrollbar,
+div.scrollable::-webkit-scrollbar {
   width: 2px;
 }
 
 /* Handle */
-main::-webkit-scrollbar-thumb, div.scrollable::-webkit-scrollbar{
+main::-webkit-scrollbar-thumb,
+div.scrollable::-webkit-scrollbar {
   background: #ffffff;
 }
 
 /* Handle on hover */
-main::-webkit-scrollbar-thumb:hover, div.scrollable::-webkit-scrollbar {
+main::-webkit-scrollbar-thumb:hover,
+div.scrollable::-webkit-scrollbar {
   background: #f3f3f3;
+}
+
+.container.container-flex.container-jogos {
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.jogo {
+  transition: all .3s ease-in-out;
+  position: relative;
+}
+
+.jogo:hover {
+  display: block;
+  transform: scale(1.1);
+  box-shadow: 1rem 1rem 1rem var(--background);
+  
+}
+.jogo::before {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 0%;
+  width: 100%;
+  bottom: 0;
+  transition: height 0.5s ease-out;
+  background-image: linear-gradient(to top, var(--secondary) 0%, transparent 25%);
+}
+
+.jogo:hover:before {
+  height: 100%;
+}
+
+.cover {
+  display: block;
+  height: auto;
+  width: 20rem;
+}
+
+.titulo-jogo {
+  position: absolute;
+  left: 50%;
+  bottom: 5%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: var(--text-color);
+  font-size: x-large;
 }
