@@ -9,18 +9,20 @@
 */
 
 document.addEventListener('DOMContentLoaded', () => {
-  let usuario = getUsuarioLogado()
-  setHeader(usuario)
-})
+  let usuario = getUsuarioLogado();
+  setHeader(usuario);
+  setSidebar(usuario);
+  setProfileButton(usuario);
+});
 
 function getUsuarioLogado() {
-  return localStorage.getItem('login')
+  return localStorage.getItem('login');
 }
 
 function setHeader(usuario) {
-  let header = document.getElementById('header-dinamica')
+  let header = document.getElementById('header-dinamica');
 
-  header.classList.add('container')
+  header.classList.remove('hidden');
 
   header.innerHTML = `
     <div id="logotipo">
@@ -33,7 +35,6 @@ function setHeader(usuario) {
             />  
         </a>
     </div>
-    <div><h1 class="center">GAMELOG</h1></div>
     <div id="usuario-info">
         <p id="usuario-info__login">${
           usuario || 'Usuário não autenticado'
@@ -46,28 +47,31 @@ function setHeader(usuario) {
         alt="Ícone de usuário padrão com a representação abstrata de uma pessoa em formas geométricas do peito para cima em escala de cinza"
     />`
   }
-    </div>`
+    </div>`;
+}
 
-  document.body.appendChild(header)
+function setProfileButton(usuario) {
+  if (usuario) {
+    document.getElementById('login-button').classList.add('hidden');
+    document.getElementById('perfil-button').classList.remove('hidden');
+  }
 }
 
 function opcaoRadioOutro() {
   if (document.getElementById('radio-outro').checked) {
     document.getElementById('radio-outro-txt').readOnly = false;
-  } 
-  else {
+  } else {
     document.getElementById('radio-outro-txt').readOnly = true;
-    document.getElementById('radio-outro-txt').value = "";
+    document.getElementById('radio-outro-txt').value = '';
   }
 }
 
 function opcaoBoxOutro() {
   if (document.getElementById('caixa-outro').checked) {
     document.getElementById('caixa-outro-txt').readOnly = false;
-  } 
-  else {
+  } else {
     document.getElementById('caixa-outro-txt').readOnly = true;
-    document.getElementById('caixa-outro-txt').value = "";
+    document.getElementById('caixa-outro-txt').value = '';
   }
 }
 
@@ -81,5 +85,66 @@ function mostrarSenha() {
   } else {
     alterador.type = 'password';
     olho.src = 'assets/img/hidden-16px.png';
+  }
+}
+
+function setSidebar() {
+  let nav = document.getElementById('sidebar');
+
+  if (nav) {
+    nav.classList.remove('hidden');
+
+    nav.innerHTML = `
+      <ul>
+      <li>
+        <div class="nav-item">
+          <p>Destaques</p>
+        </div>
+      </li>
+      <li>
+        <div class="nav-item">
+          <p>Lançamentos</p>
+        </div>
+      </li>
+      <li>
+        <div class="nav-item">
+          <p>Destaques</p>
+        </div>
+      </li>
+      <li>
+        <div class="nav-item">
+          <p>Gratuitos</p>
+        </div>
+      </li>
+      <li>
+        <div class="nav-item">
+          <p>Meus itens</p>
+        </div>
+        <div>
+          <ul>
+            <li>
+              <div class="nav-item nav-subitem">
+                <p>Favoritos</p>
+              </div>
+            </li>
+            <li>
+              <div class="nav-item nav-subitem">
+                <p>Desejados</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+
+    <div class="nav-item">
+      <p id="login-button"><a href="/login.html">Login</a></p>
+      <p
+        id="perfil-button"
+        class="hidden"
+      >
+        Perfil
+      </p>
+    </div>`;
   }
 }
