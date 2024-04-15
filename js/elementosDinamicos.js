@@ -203,3 +203,14 @@ function paletteSwap() {
 
   loadPalette();
 }
+
+function estiloRadioSelected() {
+  var estilo1 = document.getElementById('estilo-1');
+  var estilo2 = document.getElementById('estilo-2');
+
+  if (estilo1 && estilo2 && localStorage.getItem('checked') == 'estilo1') {
+    estilo1.checked = true;
+  } else if (estilo1 && estilo2 && localStorage.getItem('checked') == 'estilo2') {
+    estilo2.checked = true;
+  }
+}
