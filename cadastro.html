@@ -11,87 +11,89 @@
 
 <body>
     <nav class="container hidden" id="sidebar"></nav>
-    <section id="content">
+    <section class="content">
         <header id="header-dinamica" class="container hidden"></header>
 
-        <div class="container container-estilo">
-            <span><input type="radio" id="estilo-1" name="estilos" onclick="paletteSwap()"><label for="estilo-1">Estilo 1</label></span>
-            <span><input type="radio" id="estilo-2" name="estilos" onclick="paletteSwap()"><label for="estilo-2">Estilo 2</label></span>
-        </div>
+        <main>
+            <div class="container container-estilo">
+                <span><input type="radio" id="estilo-1" name="estilos" onclick="paletteSwap()"><label for="estilo-1">Estilo 1</label></span>
+                <span><input type="radio" id="estilo-2" name="estilos" onclick="paletteSwap()"><label for="estilo-2">Estilo 2</label></span>
+            </div>
 
 
-        <form class="container-form container" id="form-cadastro">
-            <span class="form-group">
-                <label class="title" for="username">Nome de usuario:</label>
-                <input class="text-input-form" type="text" id="username"><br>
-            </span>
-
-            <span class="form-group">
-                <label class="title" for="email">Endereco de e-mail:</label>
-                <input class="text-input-form" type="text" id="email">
-            </span>
-
-            <span class="form-group">
-                <label class="title" for="senha">Senha:</label>
-                <input class="text-input-form" type="password" id="senha">
-                <button class="peep-button" type="button" onpointerover="javascript:mostrarSenha()"
-                    onpointerout="javascript:mostrarSenha()">
-                    <img id="botao-olho" src="assets/img/hidden-16px.png">
-                </button>
-            </span>
-
-            <span class="form-group">
-                <label class="title" for="idade">Selecione sua data de nascimento:</label>
-                <input class="text-input-form text-input-date" type="date" id="idade">
-            </span>
-
-            <span class="form-group">
-                <label class="title">Gênero pessoal:</label>
-                <input type="radio" id="genero-mas" name="genero" onclick="javascript:opcaoRadioOutro()"><label
-                    for="genero-mas">Masculino</label>
-                <input type="radio" id="genero-fem" name="genero" onclick="javascript:opcaoRadioOutro()"><label
-                    for="genero-fem">Feminino</label>
-                <input type="radio" id="genero-outro" name="genero" onclick="javascript:opcaoRadioOutro()">
-
-                <span class="form-group nowrap">
-                    <label class="title" for="genero-outro">Outro:</label>
-                    <span id="radio-hidden">
-                        <input class="text-input-form text-input-outro" type="text" id="genero-outro-txt"  readonly>
-                    </span>
+            <form class="container-form container" id="form-cadastro">
+                <span class="form-group">
+                    <label class="title" for="username">Nome de usuario:</label>
+                    <input class="text-input-form" type="text" id="username"><br>
                 </span>
-            </span>
 
-            <div class="multipla-escolha">
-                <label class="title">Genero(s) de Jogo Favorito(s):</label>
-                <span><input type="checkbox" class="espaco-itens" id="caixa-1" name="caixa-1"><label
-                        for="caixa-1">Tiro</label></span>
-                <span><input type="checkbox" class="espaco-itens" id="caixa-2" name="caixa-2"><label
-                        for="caixa-2">RPG</label></span>
-                <span><input type="checkbox" class="espaco-itens" id="caixa-3" name="caixa-3"><label
-                        for="caixa-3">Simulacao</label></span>
-                <span><input type="checkbox" class="espaco-itens" id="caixa-4" name="caixa-4"><label
-                        for="caixa-4">Esportes &
-                        Corrida</label></span>
-                <span><input type="checkbox" class="espaco-itens" id="caixa-5" name="caixa-5"><label
-                        for="caixa-5">Fazenda</label></span>
-                <span><input type="checkbox" class="espaco-itens" id="caixa-6" name="caixa-6"><label
-                        for="caixa-6">Sandbox</label></span>
-                <span>
-                    <input type="checkbox" id="caixa-outro" name="caixa-outro" onclick="opcaoBoxOutro()">
-                    <span class="form-group">
-                        <label for="caixa-outro">Outro gênero:</label>
-                        <span id="caixa-hidden">
-                            <input class="text-input-form text-input-outro" type="text" id="caixa-outro-txt" readonly>
+                <span class="form-group">
+                    <label class="title" for="email">Endereco de e-mail:</label>
+                    <input class="text-input-form" type="text" id="email">
+                </span>
+
+                <span class="form-group">
+                    <label class="title" for="senha">Senha:</label>
+                    <input class="text-input-form" type="password" id="senha">
+                    <button class="peep-button" type="button" onpointerover="javascript:mostrarSenha()"
+                        onpointerout="javascript:mostrarSenha()">
+                        <img id="botao-olho" src="assets/img/hidden-16px.png">
+                    </button>
+                </span>
+
+                <span class="form-group">
+                    <label class="title" for="idade">Selecione sua data de nascimento:</label>
+                    <input class="text-input-form text-input-date" type="date" id="idade">
+                </span>
+
+                <span class="form-group">
+                    <label class="title">Gênero pessoal:</label>
+                    <input type="radio" id="genero-mas" name="genero" onclick="javascript:opcaoRadioOutro()"><label
+                        for="genero-mas">Masculino</label>
+                    <input type="radio" id="genero-fem" name="genero" onclick="javascript:opcaoRadioOutro()"><label
+                        for="genero-fem">Feminino</label>
+                    <input type="radio" id="genero-outro" name="genero" onclick="javascript:opcaoRadioOutro()">
+
+                    <span class="form-group nowrap">
+                        <label class="title" for="genero-outro">Outro:</label>
+                        <span id="radio-hidden">
+                            <input class="text-input-form text-input-outro" type="text" id="genero-outro-txt"  readonly>
                         </span>
                     </span>
                 </span>
-            </div>
 
-            <div class="botao-submit-pos">
-                <input id="btn-salvar" class="botao-submit" type="submit" value="Salvar" /><br />
-            </div>
-        </form>
-    </section>
+                <div class="multipla-escolha">
+                    <label class="title">Genero(s) de Jogo Favorito(s):</label>
+                    <span><input type="checkbox" class="espaco-itens" id="caixa-1" name="caixa-1"><label
+                            for="caixa-1">Tiro</label></span>
+                    <span><input type="checkbox" class="espaco-itens" id="caixa-2" name="caixa-2"><label
+                            for="caixa-2">RPG</label></span>
+                    <span><input type="checkbox" class="espaco-itens" id="caixa-3" name="caixa-3"><label
+                            for="caixa-3">Simulacao</label></span>
+                    <span><input type="checkbox" class="espaco-itens" id="caixa-4" name="caixa-4"><label
+                            for="caixa-4">Esportes &
+                            Corrida</label></span>
+                    <span><input type="checkbox" class="espaco-itens" id="caixa-5" name="caixa-5"><label
+                            for="caixa-5">Fazenda</label></span>
+                    <span><input type="checkbox" class="espaco-itens" id="caixa-6" name="caixa-6"><label
+                            for="caixa-6">Sandbox</label></span>
+                    <span>
+                        <input type="checkbox" id="caixa-outro" name="caixa-outro" onclick="opcaoBoxOutro()">
+                        <span class="form-group">
+                            <label for="caixa-outro">Outro gênero:</label>
+                            <span id="caixa-hidden">
+                                <input class="text-input-form text-input-outro" type="text" id="caixa-outro-txt" readonly>
+                            </span>
+                        </span>
+                    </span>
+                </div>
+
+                <div class="botao-submit-pos">
+                    <input id="btn-salvar" class="botao-submit" type="submit" value="Salvar" /><br />
+                </div>
+            </form>
+                </section>
+        </main>
 
     <footer>Ana Júlia da Cunha & Gabriel Ribas Cestari - 2024</footer>
 </body>

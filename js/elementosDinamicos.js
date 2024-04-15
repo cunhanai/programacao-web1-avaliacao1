@@ -93,7 +93,7 @@ function setSidebar() {
   if (nav) {
     nav.classList.remove('hidden');
 
-    nav.innerHTML = `
+    nav.innerHTML = `<div class="scrollable">
       <ul>
       <li>
         <div class="nav-item">
@@ -141,7 +141,7 @@ function setSidebar() {
           Perfil
         </a>
       </p>
-    </div>`;
+    </div></div>`;
   }
 }
 
