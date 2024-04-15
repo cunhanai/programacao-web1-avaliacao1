@@ -1,12 +1,12 @@
-{
-  "tabWidth": 2,
-  "useTabs": false,
-  "semi": true,
-  "singleQuote": true,
-  "trailingComma": "es5",
-  "insertFinalNewline": true,
-  "bracketSpacing": true,
-  "bracketSameLine": false,
-  "arrowParens": "avoid",
-  "singleAttributePerLine": true
-}
+// {
+//   "tabWidth": 2,
+//   "useTabs": false,
+//   "semi": true,
+//   "singleQuote": true,
+//   "trailingComma": "es5",
+//   "insertFinalNewline": true,
+//   "bracketSpacing": true,
+//   "bracketSameLine": false,
+//   "arrowParens": "avoid",
+//   "singleAttributePerLine": true
+// }

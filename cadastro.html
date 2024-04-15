@@ -21,37 +21,48 @@
 
 
         <form class="container-form container" id="form-cadastro">
-            <span class="bloco">
-                <label for="username">Nome de Usuario:</label>
+            <span class="form-group">
+                <label class="title" for="username">Nome de usuario:</label>
                 <input class="text-input-form" type="text" id="username"><br>
             </span>
 
-            <label for="email">Endereco de E-mail:</label>
-            <input class="text-input-form" type="text" id="email"><br>
+            <span class="form-group">
+                <label class="title" for="email">Endereco de e-mail:</label>
+                <input class="text-input-form" type="text" id="email">
+            </span>
 
-            <label for="senha">Senha:</label>
-            <input class="text-input-form" type="password" id="senha">
-            <button class="peep-button" type="button" onpointerover="javascript:mostrarSenha()"
-                onpointerout="javascript:mostrarSenha()">
-                <img id="botao-olho" src="assets/img/hidden-16px.png">
-            </button><br>
+            <span class="form-group">
+                <label class="title" for="senha">Senha:</label>
+                <input class="text-input-form" type="password" id="senha">
+                <button class="peep-button" type="button" onpointerover="javascript:mostrarSenha()"
+                    onpointerout="javascript:mostrarSenha()">
+                    <img id="botao-olho" src="assets/img/hidden-16px.png">
+                </button>
+            </span>
 
-            <label for="idade">Selecione sua data de nascimento:</label>
-            <input class="text-input-form text-input-date" type="date" id="idade"><br>
+            <span class="form-group">
+                <label class="title" for="idade">Selecione sua data de nascimento:</label>
+                <input class="text-input-form text-input-date" type="date" id="idade">
+            </span>
 
-            <label>Genero Pessoal:</label>
-            <input type="radio" id="genero-mas" name="genero" onclick="javascript:opcaoRadioOutro()"><label
-                for="genero-mas">Masculino</label>
-            <input type="radio" id="genero-fem" name="genero" onclick="javascript:opcaoRadioOutro()"><label
-                for="genero-fem">Feminino</label>
-            <input type="radio" id="genero-outro" name="genero" onclick="javascript:opcaoRadioOutro()">
-            <label for="genero-outro">Outro:</label>
-            <span id="radio-hidden">
-                <input class="text-input-form text-input-outro" type="text" id="genero-outro-txt" readonly>
+            <span class="form-group">
+                <label class="title">Gênero pessoal:</label>
+                <input type="radio" id="genero-mas" name="genero" onclick="javascript:opcaoRadioOutro()"><label
+                    for="genero-mas">Masculino</label>
+                <input type="radio" id="genero-fem" name="genero" onclick="javascript:opcaoRadioOutro()"><label
+                    for="genero-fem">Feminino</label>
+                <input type="radio" id="genero-outro" name="genero" onclick="javascript:opcaoRadioOutro()">
+
+                <span class="form-group nowrap">
+                    <label class="title" for="genero-outro">Outro:</label>
+                    <span id="radio-hidden">
+                        <input class="text-input-form text-input-outro" type="text" id="genero-outro-txt"  readonly>
+                    </span>
+                </span>
             </span>
 
             <div class="multipla-escolha">
-                <label>Genero(s) de Jogo Favorito(s):</label>
+                <label class="title">Genero(s) de Jogo Favorito(s):</label>
                 <span><input type="checkbox" class="espaco-itens" id="caixa-1" name="caixa-1"><label
                         for="caixa-1">Tiro</label></span>
                 <span><input type="checkbox" class="espaco-itens" id="caixa-2" name="caixa-2"><label
@@ -67,9 +78,11 @@
                         for="caixa-6">Sandbox</label></span>
                 <span>
                     <input type="checkbox" id="caixa-outro" name="caixa-outro" onclick="opcaoBoxOutro()">
-                    <label for="caixa-outro">Outro Genero:</label>
-                    <span id="caixa-hidden">
-                        <input class="text-input-form text-input-outro" type="text" id="caixa-outro-txt" readonly>
+                    <span class="form-group">
+                        <label for="caixa-outro">Outro gênero:</label>
+                        <span id="caixa-hidden">
+                            <input class="text-input-form text-input-outro" type="text" id="caixa-outro-txt" readonly>
+                        </span>
                     </span>
                 </span>
             </div>
