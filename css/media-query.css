@@ -1,0 +1,12 @@
+@media screen and (max-width: 800px) {
+    nav {
+        display: none;
+    }
+
+    .content {
+        width: 100%;
+    }
+
+    .toogle-menu {
+    }
+}

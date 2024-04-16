@@ -27,14 +27,19 @@ function setHeader(usuario) {
   header.classList.remove('hidden');
 
   header.innerHTML = `
-    <div>
-        <a href="index.html">
-            <img
-                id="logotipo"
-                src="assets/img/logo-bw.png"
-                alt="Logo flat do site contendo um controle de videogame preto e branco, ou gradiente."
-            />  
-        </a>
+    <div class="header-start">
+      <img
+        id="toogle-menu"
+        src="assets/img/show-nav-dark.png"
+        alt="Logo flat do site contendo um controle de videogame preto e branco, ou gradiente."
+      />
+      <a href="index.html">
+          <img
+              id="logotipo"
+              src="assets/img/logo-bw.png"
+              alt="Logo flat do site contendo um controle de videogame preto e branco, ou gradiente."
+          />  
+      </a>
     </div>
     ${!usuario
       ? `<p id="usuario-info__login">Usuário não autenticado</p>`
