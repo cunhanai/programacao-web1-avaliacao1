@@ -215,7 +215,7 @@ function estiloRadioSelected() {
   }
 }
 
-function mostrarJogos(className) {
+ function mostrarJogos(className) {
   var i = 0;
 
   var jogos = document.getElementsByClassName(className);
@@ -225,22 +225,28 @@ function mostrarJogos(className) {
     i++;
     if (i >= jogos.length) {
       clearInterval(clock);
-    }
-  }, 200)
+    }       
+  }, /* 20 */0)
 
 }
+/*
 
 function resetOpacidade() {
   var jogos = document.getElementsByClassName('jogo');
+  var classe = document.getElementsByClassName('mostrar');
 
-  for (var i = 0; i < jogos.length; i++) {
-    jogos[i].style.transition = 'none';
+  for (var i = 0; i < classe.length; i++) {
     jogos[i].classList.remove("mostrar");
-    jogos[i].style.transition = 'var(--transition-jogos)';
   }
 
-}
+  for (var i = 0; i < jogos.length; i++) {
+    jogos[i].classList.remove("mostrar");
+  }
 
+  classe = 'var(--transition-jogos)'; 
+
+}
+ */
 function setDisplay(className, displayValue) {
   var jogos = document.getElementsByClassName(className);
   for (var i = 0; i < jogos.length; i++) {
@@ -249,49 +255,49 @@ function setDisplay(className, displayValue) {
 }
 
 function destaques() {
-  resetOpacidade();
-  setTimeout(mostrarJogos('jogo'), 100);
+/*   resetOpacidade();
+  setTimeout(mostrarJogos('jogo'), 100); */
 
   setDisplay('jogo', 'block');
   mostrarJogos('jogo')
 }
 
 function lancamentos() {
-  resetOpacidade();
-  mostrarJogos('lanc');
+/*   resetOpacidade();
+  mostrarJogos('lanc'); */
 
   setDisplay('jogo', 'none');
   setDisplay('lanc', 'block');
 }
 
 function gratuitos() {
-  resetOpacidade();
-  mostrarJogos('grat');
-
+/*   resetOpacidade();
+ *//*   mostrarJogos('grat');
+ */
   setDisplay('jogo', 'none');
   setDisplay('grat', 'block');
 }
 
 function myItems() {
-  resetOpacidade();
-  mostrarJogos('my-it');
-
+/*   resetOpacidade();
+ *//*   mostrarJogos('my-it');
+ */
   setDisplay('jogo', 'none');
   setDisplay('my-it', 'block');
 }
 
 function favoritos() {
-  resetOpacidade();
-  mostrarJogos('fav');
-
+/*   resetOpacidade();
+ *//*   mostrarJogos('fav');
+ */
   setDisplay('jogo', 'none');
   setDisplay('fav', 'block');
 }
 
 function desejados() {
-  resetOpacidade();
-  mostrarJogos('desej');
-
+/*   resetOpacidade();
+ *//*   mostrarJogos('desej');
+ */
   setDisplay('jogo', 'none');
   setDisplay('desej', 'block');
 }
