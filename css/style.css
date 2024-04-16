@@ -329,7 +329,9 @@ div.scrollable::-webkit-scrollbar {
 
 .container.container-flex.container-jogos {
   flex-flow: row wrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  row-gap: 2rem;
+  margin-right: 2.5rem;
 }
 
 .jogo {
@@ -351,7 +353,7 @@ div.scrollable::-webkit-scrollbar {
   width: 100%;
   bottom: 0;
   transition: height 0.5s ease-out;
-  background-image: linear-gradient(to top, var(--secondary) 0%, transparent 25%);
+  background-image: linear-gradient(to top, var(--secondary) 0%, transparent 30%);
 }
 
 .jogo:hover:before {
@@ -368,8 +370,10 @@ div.scrollable::-webkit-scrollbar {
   position: absolute;
   left: 50%;
   bottom: 5%;
+  text-wrap: nowrap;
   transform: translate(-50%, -50%);
   text-align: center;
   color: var(--text-color);
   font-size: x-large;
+  text-shadow: 0rem  0rem 4px var(--background);
 }
