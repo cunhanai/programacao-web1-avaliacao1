@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setSidebar(usuario);
   setProfileButton(usuario);
   loadPalette();
+  mostrarJogos('jogo');
 });
 
 function getUsuarioLogado() {
@@ -31,8 +32,7 @@ function setHeader(usuario) {
             <img
                 id="logotipo"
                 src="assets/img/logo-bw.png"
-                /* mudar alt */
-                alt="Logo flat do site contendo um controle de videogame cinza com o botões nas cores amarelo, vermelho e azul claro."
+                alt="Logo flat do site contendo um controle de videogame preto e branco, ou gradiente."
             />  
         </a>
     </div>
@@ -95,34 +95,34 @@ function setSidebar() {
 
     nav.innerHTML = `<div class="scrollable">
       <ul>
-      <li>
-        <div class="nav-item">
+      <li href="index.html">
+        <div class="nav-item" onclick="destaques()">
           <p>Destaques</p>
         </div>
       </li>
       <li>
-        <div class="nav-item">
+        <div class="nav-item" onclick="lancamentos()">
           <p>Lançamentos</p>
         </div>
       </li>
       <li>
-        <div class="nav-item">
+        <div class="nav-item" onclick="gratuitos()">
           <p>Gratuitos</p>
         </div>
       </li>
       <li>
-        <div class="nav-item">
+        <div class="nav-item" onclick="myItems()">
           <p>Meus itens</p>
         </div>
         <div>
           <ul>
             <li>
-              <div class="nav-item nav-subitem">
+              <div class="nav-item nav-subitem" onclick="favoritos()">
                 <p>Favoritos</p>
               </div>
             </li>
             <li>
-              <div class="nav-item nav-subitem">
+              <div class="nav-item nav-subitem" onclick="desejados()">
                 <p>Desejados</p>
               </div>
             </li>
@@ -213,4 +213,85 @@ function estiloRadioSelected() {
   } else if (estilo1 && estilo2 && localStorage.getItem('checked') == 'estilo2') {
     estilo2.checked = true;
   }
+}
+
+function mostrarJogos(className) {
+  var i = 0;
+
+  var jogos = document.getElementsByClassName(className);
+
+  var clock = setInterval(function () {
+    jogos[i].classList.add('mostrar');
+    i++;
+    if (i >= jogos.length) {
+      clearInterval(clock);
+    }
+  }, 200)
+
+}
+
+function resetOpacidade() {
+  var jogos = document.getElementsByClassName('jogo');
+
+  for (var i = 0; i < jogos.length; i++) {
+    jogos[i].style.transition = 'none';
+    jogos[i].classList.remove("mostrar");
+    jogos[i].style.transition = 'var(--transition-jogos)';
+  }
+
+}
+
+function setDisplay(className, displayValue) {
+  var jogos = document.getElementsByClassName(className);
+  for (var i = 0; i < jogos.length; i++) {
+    jogos[i].style.display = displayValue;
+  }
+}
+
+function destaques() {
+  resetOpacidade();
+  setTimeout(mostrarJogos('jogo'), 100);
+
+  setDisplay('jogo', 'block');
+  mostrarJogos('jogo')
+}
+
+function lancamentos() {
+  resetOpacidade();
+  mostrarJogos('lanc');
+
+  setDisplay('jogo', 'none');
+  setDisplay('lanc', 'block');
+}
+
+function gratuitos() {
+  resetOpacidade();
+  mostrarJogos('grat');
+
+  setDisplay('jogo', 'none');
+  setDisplay('grat', 'block');
+}
+
+function myItems() {
+  resetOpacidade();
+  mostrarJogos('my-it');
+
+  setDisplay('jogo', 'none');
+  setDisplay('my-it', 'block');
+}
+
+function favoritos() {
+  resetOpacidade();
+  mostrarJogos('fav');
+
+  setDisplay('jogo', 'none');
+  setDisplay('fav', 'block');
+}
+
+function desejados() {
+  resetOpacidade();
+  mostrarJogos('desej');
+
+  setDisplay('jogo', 'none');
+  setDisplay('desej', 'block');
 }

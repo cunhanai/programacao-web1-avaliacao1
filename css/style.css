@@ -337,14 +337,22 @@ div.scrollable::-webkit-scrollbar {
 .jogo {
   transition: all .3s ease-in-out;
   position: relative;
+  opacity: 0;
+}
+
+.mostrar {
+  transition: var(--transition-jogos);
+  opacity: 1;
 }
 
 .jogo:hover {
   display: block;
   transform: scale(1.1);
   box-shadow: 1rem 1rem 1rem var(--background);
+  cursor: pointer;
   
 }
+
 .jogo::before {
   content: '';
   display: block;
@@ -353,7 +361,7 @@ div.scrollable::-webkit-scrollbar {
   width: 100%;
   bottom: 0;
   transition: height 0.5s ease-out;
-  background-image: linear-gradient(to top, var(--secondary) 0%, transparent 30%);
+  background-image: linear-gradient(to top, var(--secondary) 0%, transparent 45%);
 }
 
 .jogo:hover:before {

@@ -7,4 +7,5 @@
   --primary: #82b9ff;
   --secondary: #ff6464;
   --tertiary: #ffcd46;
+  --transition-jogos: opacity .3s ease-in;
 }
