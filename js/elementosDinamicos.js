@@ -141,7 +141,7 @@ function setSidebar() {
           Perfil
         </a>
       </p>
-    </div></div>`;
+    </div>`;
   }
 }
 
@@ -226,18 +226,7 @@ function mostrarJogos(className) {
     if (i >= jogos.length) {
       clearInterval(clock);
     }
-  }, 200)
-
-}
-
-function resetOpacidade() {
-  var jogos = document.getElementsByClassName('jogo');
-
-  for (var i = 0; i < jogos.length; i++) {
-    jogos[i].style.transition = 'none';
-    jogos[i].classList.remove("mostrar");
-    jogos[i].style.transition = 'var(--transition-jogos)';
-  }
+  }, 0)
 
 }
 
@@ -249,49 +238,31 @@ function setDisplay(className, displayValue) {
 }
 
 function destaques() {
-  resetOpacidade();
-  setTimeout(mostrarJogos('jogo'), 100);
-
   setDisplay('jogo', 'block');
   mostrarJogos('jogo')
 }
 
 function lancamentos() {
-  resetOpacidade();
-  mostrarJogos('lanc');
-
   setDisplay('jogo', 'none');
   setDisplay('lanc', 'block');
 }
 
 function gratuitos() {
-  resetOpacidade();
-  mostrarJogos('grat');
-
   setDisplay('jogo', 'none');
   setDisplay('grat', 'block');
 }
 
 function myItems() {
-  resetOpacidade();
-  mostrarJogos('my-it');
-
   setDisplay('jogo', 'none');
   setDisplay('my-it', 'block');
 }
 
 function favoritos() {
-  resetOpacidade();
-  mostrarJogos('fav');
-
   setDisplay('jogo', 'none');
   setDisplay('fav', 'block');
 }
 
 function desejados() {
-  resetOpacidade();
-  mostrarJogos('desej');
-
   setDisplay('jogo', 'none');
   setDisplay('desej', 'block');
 }

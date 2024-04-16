@@ -169,12 +169,17 @@ html {
 .nav-item {
   padding: 1.7rem;
   height: fit-content;
+  cursor: pointer;
 }
 
 .nav-item:hover {
   transition: all ease 0.5s;
   transform: translateX(10px);
   text-shadow: 0 0 50px -15px black;
+}
+
+.nav-subitem {
+  padding-left: 3.2rem;
 }
 
 a,
@@ -246,6 +251,7 @@ footer {
   display: flex;
   justify-content: center;
   margin-top: 2rem;
+  gap: 1rem;
 }
 
 #btn-salvar {
@@ -384,4 +390,8 @@ div.scrollable::-webkit-scrollbar {
   color: var(--text-color);
   font-size: x-large;
   text-shadow: 0rem  0rem 4px var(--background);
+}
+
+.btn-sair a {
+  color: var(--text-color);
 }
