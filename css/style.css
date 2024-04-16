@@ -377,7 +377,7 @@ div.scrollable::-webkit-scrollbar {
 .cover {
   display: block;
   height: auto;
-  width: 20rem;
+  width: 17vw;
 }
 
 .titulo-jogo {
