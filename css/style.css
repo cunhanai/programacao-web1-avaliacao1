@@ -393,7 +393,7 @@ div.scrollable::-webkit-scrollbar {
   transform: translate(-50%, -50%);
   text-align: center;
   color: var(--text-color);
-  font-size: x-large;
+  font-size: 1.4vw;
   text-shadow: 0rem  0rem 4px var(--background);
 }
 

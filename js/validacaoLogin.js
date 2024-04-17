@@ -28,6 +28,6 @@ function validarLogin() {
 function getUsuariosCadastrados() {
   return [
     { login: 'Cunhanai', password: '@Ana#123' },
-    { login: 'GRCestari', password: '@Gabriel$123' },
+    { login: 'GRCestari', password: 'senhalegal123' },
   ]
 }
