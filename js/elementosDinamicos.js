@@ -30,7 +30,7 @@ function setHeader(usuario) {
     <div class="header-start">
       <img
         id="toogle-menu"
-        src="assets/img/show-nav-dark.png"
+        src="assets/img/show-nav-bw.png"
         alt="Logo flat do site contendo um controle de videogame preto e branco, ou gradiente."
       />
       <a href="index.html">
@@ -152,13 +152,16 @@ function setSidebar() {
 
 function loadPalette() {
   var logo = document.getElementById('logotipo');
+  var menu = document.getElementById('toogle-menu');
 
   if (!localStorage.getItem('logo')) {
     localStorage.setItem('logo', 'assets/img/logo-bw.png');
+    localStorage.setItem('menu', 'assets/img/show-nav-bw.png');
     localStorage.setItem('checked', 'estilo1');
   }
 
   logo.src = localStorage.getItem('logo');
+  menu.src = localStorage.getItem('menu');
 
   document.documentElement.style.setProperty('--font', localStorage.getItem('font'));
 
@@ -179,6 +182,7 @@ function paletteSwap() {
     localStorage.setItem('checked', 'estilo2');
 
     localStorage.setItem('logo', 'assets/img/logo-grd.png');
+    localStorage.setItem('menu', 'assets/img/show-nav-grd.png');
 
     localStorage.setItem('font', '"Nanum Gothic", sans-serif');
 
@@ -194,6 +198,7 @@ function paletteSwap() {
     localStorage.setItem('checked', 'estilo1');
 
     localStorage.setItem('logo', 'assets/img/logo-bw.png');
+    localStorage.setItem('menu', 'assets/img/show-nav-bw.png');
 
     localStorage.setItem('font', '"Comfortaa", sans-serif');
 
