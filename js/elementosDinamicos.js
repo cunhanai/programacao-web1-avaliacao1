@@ -15,6 +15,37 @@ document.addEventListener('DOMContentLoaded', () => {
   setProfileButton(usuario);
   loadPalette();
   mostrarJogos('jogo');
+
+  let menuButton = document.getElementById('toogle-menu');
+
+  menuButton.addEventListener('click', () => {
+    let nav = document.getElementById('sidebar');
+
+    if (nav.style.display == 'none') {
+      nav.style.display = 'block';
+    } else {
+      nav.style.display = 'none';
+    }
+  });
+});
+
+function setMediaQuery(media) {
+  let nav = document.getElementById('sidebar');
+
+  if (media.matches) {
+    nav.style.display = 'block';
+  }
+}
+
+// Create a MediaQueryList object
+var mediaQuery = window.matchMedia('(min-width: 801px)');
+
+// Call listener function at run time
+setMediaQuery(mediaQuery);
+
+// Attach listener function on state changes
+mediaQuery.addEventListener('change', function () {
+  setMediaQuery(mediaQuery);
 });
 
 function getUsuarioLogado() {
@@ -41,9 +72,10 @@ function setHeader(usuario) {
           />  
       </a>
     </div>
-    ${!usuario
-      ? `<p id="usuario-info__login">Usuário não autenticado</p>`
-      : `<a href="/cadastro.html" class="text" id="usuario-info">
+    ${
+      !usuario
+        ? `<p id="usuario-info__login">Usuário não autenticado</p>`
+        : `<a href="/cadastro.html" class="text" id="usuario-info">
             <p id="usuario-info__login">${usuario}</p>
             <img
               id="usuario-info__picture"
@@ -163,15 +195,39 @@ function loadPalette() {
   logo.src = localStorage.getItem('logo');
   menu.src = localStorage.getItem('menu');
 
-  document.documentElement.style.setProperty('--font', localStorage.getItem('font'));
+  document.documentElement.style.setProperty(
+    '--font',
+    localStorage.getItem('font')
+  );
 
-  document.documentElement.style.setProperty('--background', localStorage.getItem('background'));
-  document.documentElement.style.setProperty('--container-color', localStorage.getItem('container-color'));
-  document.documentElement.style.setProperty('--text-color', localStorage.getItem('text-color'));
-  document.documentElement.style.setProperty('--text-background', localStorage.getItem('text-background'));
-  document.documentElement.style.setProperty('--primary', localStorage.getItem('primary'));
-  document.documentElement.style.setProperty('--secondary', localStorage.getItem('secondary'));
-  document.documentElement.style.setProperty('--tertiary', localStorage.getItem('tertiary'));
+  document.documentElement.style.setProperty(
+    '--background',
+    localStorage.getItem('background')
+  );
+  document.documentElement.style.setProperty(
+    '--container-color',
+    localStorage.getItem('container-color')
+  );
+  document.documentElement.style.setProperty(
+    '--text-color',
+    localStorage.getItem('text-color')
+  );
+  document.documentElement.style.setProperty(
+    '--text-background',
+    localStorage.getItem('text-background')
+  );
+  document.documentElement.style.setProperty(
+    '--primary',
+    localStorage.getItem('primary')
+  );
+  document.documentElement.style.setProperty(
+    '--secondary',
+    localStorage.getItem('secondary')
+  );
+  document.documentElement.style.setProperty(
+    '--tertiary',
+    localStorage.getItem('tertiary')
+  );
 }
 
 function paletteSwap() {
@@ -193,7 +249,6 @@ function paletteSwap() {
     localStorage.setItem('primary', '#594ae2');
     localStorage.setItem('secondary', '#d1286b');
     localStorage.setItem('tertiary', '#d7ff46');
-
   } else if (estilo1.checked) {
     localStorage.setItem('checked', 'estilo1');
 
@@ -220,7 +275,11 @@ function estiloRadioSelected() {
 
   if (estilo1 && estilo2 && localStorage.getItem('checked') == 'estilo1') {
     estilo1.checked = true;
-  } else if (estilo1 && estilo2 && localStorage.getItem('checked') == 'estilo2') {
+  } else if (
+    estilo1 &&
+    estilo2 &&
+    localStorage.getItem('checked') == 'estilo2'
+  ) {
     estilo2.checked = true;
   }
 }
@@ -236,8 +295,7 @@ function mostrarJogos(className) {
     if (i >= jogos.length) {
       clearInterval(clock);
     }
-  }, 0)
-
+  }, 0);
 }
 
 function setDisplay(className, displayValue) {
@@ -249,7 +307,7 @@ function setDisplay(className, displayValue) {
 
 function destaques() {
   setDisplay('jogo', 'block');
-  mostrarJogos('jogo')
+  mostrarJogos('jogo');
 }
 
 function lancamentos() {

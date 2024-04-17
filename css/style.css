@@ -78,6 +78,7 @@ h3 {
 }
 
 #toogle-menu {
+  display: none;
   width: auto;
   height: 1.8rem;
 }
@@ -151,6 +152,7 @@ input[type='submit']:hover {
 }
 
 nav {
+  display: block;
   background-color: var(--secondary) !important;
   color: white;
   padding: 1.5rem !important;
