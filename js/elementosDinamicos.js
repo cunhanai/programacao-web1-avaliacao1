@@ -1,13 +1,3 @@
-/* 
-    Adiciona o cabeçalho em todas as páginas.
-
-    Caso seja necessário fazer alterações no html, coloca ele em alguma página (para ficar mais fácil de editar) e comenta esse código.
-
-    Depois que o código estiver pronto, cola o conteúdo do header aqui dentro novamente.
-
-    Faça a mesma coisa com o rodapé.
-*/
-
 document.addEventListener('DOMContentLoaded', () => {
   let usuario = getUsuarioLogado();
   setHeader(usuario);
@@ -17,10 +7,9 @@ document.addEventListener('DOMContentLoaded', () => {
   mostrarJogos('jogo');
 
   let menuButton = document.getElementById('toogle-menu');
+  let nav = document.getElementById('sidebar');
 
   menuButton.addEventListener('click', () => {
-    let nav = document.getElementById('sidebar');
-
     if (nav.style.display == 'none') {
       nav.style.display = 'block';
     } else {
@@ -29,23 +18,16 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-function setMediaQuery(media) {
+let mediaQueryMin = window.matchMedia('(min-width: 801px)');
+
+mediaQueryMin.addEventListener('change', function () {
   let nav = document.getElementById('sidebar');
 
-  if (media.matches) {
+  if (mediaQueryMin.matches) {
     nav.style.display = 'block';
+  } else {
+    nav.style.display = 'none';
   }
-}
-
-// Create a MediaQueryList object
-var mediaQuery = window.matchMedia('(min-width: 801px)');
-
-// Call listener function at run time
-setMediaQuery(mediaQuery);
-
-// Attach listener function on state changes
-mediaQuery.addEventListener('change', function () {
-  setMediaQuery(mediaQuery);
 });
 
 function getUsuarioLogado() {

@@ -1,19 +1,19 @@
 @media screen and (max-width: 800px) {
-    nav {
-        display: none;
-    }
+  #sidebar {
+    display: none;
+  }
 
-    .content {
-        width: 100%;
-    }
+  .content {
+    width: 100%;
+  }
 
-    #toogle-menu {
-        display: block;
-    }
+  #toogle-menu {
+    display: block;
+  }
 }
 
 @media screen and (min-width: 801px) {
-    nav {
-        display: block;
-    }
+  nav {
+    display: block;
+  }
 }
